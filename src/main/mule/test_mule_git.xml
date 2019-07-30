@@ -5,10 +5,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="8af5eece-cb7d-4dad-981c-b32f604f6d59" >
-		<http:listener-connection host="localhost" port="8081" />
+		<http:listener-connection host="localhost" port="8082" />
 	</http:listener-config>
 	<flow name="test_mule_gitFlow" doc:id="2f013d2d-8303-4289-8af3-52330392bb1f" >
 		<http:listener doc:name="Listener" doc:id="4bb6f823-9d54-468e-8e9a-46c473d3e65e" config-ref="HTTP_Listener_config" path="/test"/>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="e0448a3e-7d0f-410d-a11a-2a11dd245d45" />
+		<set-payload value="'I want to hardcode'" doc:name="Set Payload" doc:id="e0448a3e-7d0f-410d-a11a-2a11dd245d45" />
 	</flow>
 </mule>
